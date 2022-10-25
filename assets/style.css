@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Guideline ↓↓↓
+Font sizes: H1→3rem H2→1.5rem Body→1.125rem
+Layout max-width: 980px*/
+
+:root {
+    --black: #312614;
+    --orange: #B7832F;
+    --gray: #707070;
+    --white: #FFF;
+}
+
+/* Guideline ↑↑↑ */
+
+/* DEBUG BEGIN */
+#debug {
+    position: absolute;
+    color: #707070;
+    top: 1em;
+    left: 1em;
+}
+
+#debug::after {
+    content: "LANDSCAPE";
+}
+/* DEBUG END */
+
+@media (orientation: portrait) {
+    .title img {
+        content: url(./images/background-ocean.jpg);
+    }
+
+    #debug::after {
+        content: "PORTRAIT";
+    }
+
+    
+    .title h1::after {
+        content: " :)";
+    }
+}
+
+body {
+    font-size: 1.125rem;
+    color: var(--gray);
+}
+
+h1 {
+    font-style: 3rem;
+    color: var(--black);
+}
+
+h1 span {
+    color: var(--orange);
+}
+
+.title img {
+    max-width: 100%;
+    padding: 1em 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.container > .title {
+    text-align: center;
+    padding: 3em 0;
+    font-size: 3rem;
+}
+
+.columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.columns > .col > h2 {
+    padding: 1em 0;
+    font-size: 1.5rem;
+}
+
+.col-bg {
+    background-color: var(--black);
+    padding: 0 1em 1em;
+    color: var(--white);
+}
+
+.col-1 {
+    width: 25%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 75%;
+}
