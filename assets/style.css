@@ -46,6 +46,17 @@ Layout max-width: 980px*/
     }
 }
 
+/* Responsive on small screen sizes: Paragraph turns into Rows */
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100% !important;
+    }
+}
+
 body {
     font-size: 1.125rem;
     color: var(--gray);
@@ -73,7 +84,7 @@ h1 span {
 
 .container > .title {
     text-align: center;
-    padding: 3em 0;
+    padding: 1em 0 0;
     font-size: 3rem;
 }
 
